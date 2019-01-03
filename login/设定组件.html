@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>定义组件</title>
+    
+
+</head>
+<body>
+        <div id="nimei">
+          <!-- <my-component></my-component>
+          <my-button></my-button> -->
+          <button_123></button_123>
+        </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+
+<script>
+Vue.component('button_123',{
+    data() {
+        return {
+            conut:0,
+        }
+    },
+    template:'<div @click="conut++">你没你没你没你没你没你没你没{{conut}}</div>'
+})
+
+new Vue({
+    el:"#nimei"
+})
+
+// 注册
+// Vue.component('my-component', {
+//   template: '<div>A custom component!</div>'
+// })
+
+// Vue.component('my-button', {
+//     data:function(){
+//         return{
+//             count:0
+//         }
+//     },
+//   template: '<button @click="count++">点击内容{{count}}</button>'
+// })
+// var vm = new Vue({
+//   el: '#example'
+// })
+</script>
+</html>

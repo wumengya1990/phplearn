@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登录</title>
+    <link rel="stylesheet" rel="stylesheet" href="./../css/main.css">
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    
+    
+</head>
+<body>
+    <div class="mainscroll bg1">
+        <div class="login">
+            <h3>只是登录，别不信</h3>
+            <form name="login" action="login.php" method="post">
+                <div class="listBox">
+                    <div>
+                        <p>用脸</p>
+                        <!-- <el-input placeholder="请输入内容" v-model="input10" clearable></el-input> -->
+                        <input class="wenzi" type="text" name="xingming">
+                        <buttonC></buttonC>
+                    </div>
+                    <div>
+                        <p>用屁股</p>
+                        <input class="wenzi" type="password" name="pwd">
+                    </div>
+                    <div class="linkBox"><a href="register.html">注册</a></div>
+                </div>
+                <div class="bts"><input type="submit" name="submit" value="登录"></div>
+            </form>
+        </div>
+    </div>
+</body>
+
+<!-- 引入组件库 -->
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+
+<script>
+Vue.component('buttonC',{
+    data:function(){
+        return{
+            count:0
+        }
+    },
+    template:'<button :click="count++">点击次数{{count}}</button>'
+})
+new Vue({
+ el:".login",
+ data() {
+     return {
+         
+     }
+ }
+})
+</script>
+</html>
